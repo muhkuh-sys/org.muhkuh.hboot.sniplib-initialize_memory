@@ -1,9 +1,12 @@
-<!-- ${PROJECT_NAME} v${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_MICRO} ${PROJECT_VERSION_VCS} -->
+<!-- org.muhkuh.hboot.sniplib-initialize_memory v${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_MICRO} ${PROJECT_VERSION_VCS} -->
 <Data>
 	<Hex address="${%LOAD_ADDRESS%}">
 ${%PROGRAM_DATA%}
 	</Hex>
 </Data>
 <Execute>
+	<R0>%%START%%</R0>
+	<R1>%%END%%</R1>
+	<R2>%%FILL%%</R2>
 	<Address>${%EXECUTION_ADDRESS%}</Address>
 </Execute>
