@@ -66,8 +66,13 @@ atSnippet = {
     'license': 'GPL-2.0',
     'author_name': 'Muhkuh team',
     'author_url': 'https://github.com/muhkuh-sys',
-    'description': 'Initialize a memory area with a 32bit value using STM bursts.',
-    'categories': ['netx4000', 'memory']
+    'description': File('src/netx4000/snippet.dsc'),
+    'categories': ['netx4000', 'memory'],
+    'parameter': {
+        'START': {'help': 'The first address to fill. Must be a multiple of 4.'},
+        'END': {'help': 'The last address to fill + 4. Must be a multiple of 4.'},
+        'FILL': {'help': 'The fill value. This is a 32bit value, so 0x12 will result in 0x12 0x00 0x00 0x00 0x12 ...', 'default': 0}
+    }
 }
 strArtifactPath = 'targets/snippets/%s/%s/%s' % ('/'.join(aArtifactGroupReverse), atSnippet['artifact'], PROJECT_VERSION)
 snippet_netx4000_cr7 = env_netx4000_cr7.HBootSnippet('%s/%s-%s.xml' % (strArtifactPath, atSnippet['artifact'], PROJECT_VERSION), snip_netx4000_cr7, PARAMETER=atSnippet)
