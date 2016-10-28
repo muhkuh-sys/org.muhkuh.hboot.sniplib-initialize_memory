@@ -62,7 +62,7 @@ atSnippet = {
     'group': '.'.join(aArtifactGroupReverse),
     'artifact': 'initialize_memory',
     'version': PROJECT_VERSION,
-    'vcs_id': env_netx4000_cr7.Version_GetVcsId(),
+    'vcs_id': env_netx4000_cr7.Version_GetVcsIdLong(),
     'vcs_url': env_netx4000_cr7.Version_GetVcsUrl(),
     'license': 'GPL-2.0',
     'author_name': 'Muhkuh team',
